@@ -1,17 +1,9 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './media.css';
 
 class Media extends Component {
 	render() {
-		/*const styles = {
-			container: {
-				fontSize: 14,
-				color: '#44546b',
-				cursor: 'pointer',
-				width: 260,
-				border: '1px solid red'
-			}
-		}*/
 		return (
 			<div className="Media">
 				<div className="Media-cover">
@@ -27,6 +19,13 @@ class Media extends Component {
 			</div>
 		)
 	}
+}
+// Validations
+Media.propTypes = {
+	image: PropTypes.string,
+	title: PropTypes.string.isRequired,
+	author: PropTypes.string,
+	type: PropTypes.oneOf(['video', 'audio']) // must be audio or video
 }
 
 export default Media;
