@@ -18,7 +18,7 @@ class Media extends Component {
 					<img className="Media-image"
 						src={this.props.cover}
 						alt=""
-						width={260}
+						width={250}
 						height ={160}
 						/>
 					<h3 className="Media-title">{this.props.title}</h3>
