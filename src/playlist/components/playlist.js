@@ -3,7 +3,6 @@ import React from 'react';
 import Media from './media';
 
 import './playlist.css';
-import './category.css';
 
 function Playlist(props) {
     return(
