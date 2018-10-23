@@ -4,7 +4,7 @@ function Icon(props) {
   const {
     color,
     size,
-  } = props
+  } = props  
   return (
     <svg
       fill={color}

@@ -1,8 +1,12 @@
 import React from 'react';
-import Media from './media.js';
+
+import Media from './media';
+import Play from '../../icons/components/play';
+import Volume from '../../icons/components/volume';
+import Pause from '../../icons/components/pause';
+
 import './playlist.css';
 import './category.css';
-import Play from '../../icons/components/play';
 
 function Playlist(props) {
     const {categories} = props.data
@@ -16,12 +20,20 @@ function Playlist(props) {
                 <p>{category.description}</p>
                 <div className="Playlist">
                   <Play
-                    size={100}
+                    size={50}
                     color="red"
                   />
+                <Volume
+                  size={50}
+                  color="blue"
+                />
+              <Pause
+                  size={50}
+                  color="green"
+                />
                 {
                   category.playlist.map(item => {
-                    return <Media {...item} key={category.id}/>
+                    return <Media {...item} key={item.id}/>
                   })
                 }
                 </div>
