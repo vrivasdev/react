@@ -28,6 +28,7 @@ class Home extends Component {
           <Related />
           <VideoPlayer
             autoplay
+            src="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
           />
           <Categories
             categories={this.props.data.categories}
