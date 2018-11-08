@@ -6,6 +6,7 @@ import PlayPause from '../components/play-pause';
 import Timer from '../components/timer';
 import Controls from '../components/video-player-controls';
 import formattedTime from '../components/helper';
+import ProgressBar from '../components/progress-bar';
 
 class VideoPlayer extends Component {
   state = {
@@ -34,6 +35,9 @@ class VideoPlayer extends Component {
       currentTime: this.video.currentTime
     })
   }
+  handleProgressChange = event => {
+    this.video.currentTime = event.target.value 
+  }
   render() {
     return (
       <VideoPlayerLayout>
@@ -49,6 +53,11 @@ class VideoPlayer extends Component {
             duration={formattedTime(this.state.duration)}
             currentTime={formattedTime(this.state.currentTime)}
           />
+        <ProgressBar
+          duration={this.state.duration}
+          value={this.state.currentTime}
+          handleProgressChange={this.handleProgressChange}
+        />
         </Controls>
       <Video
         autoplay={this.props.autoplay}
