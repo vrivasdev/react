@@ -4,13 +4,14 @@ function Icon(props) {
   const {
     color,
     size,
-  } = props  
+  } = props
   return (
     <svg
       fill={color}
       height={size}
       width={size}
       viewBox="0 0 32 32"
+      onClick={props.handleVolumeClick}     
     >
       {props.children}
     </svg>

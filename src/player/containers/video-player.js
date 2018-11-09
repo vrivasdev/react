@@ -52,7 +52,10 @@ class VideoPlayer extends Component {
     })
   }
   handleVolumeChange = event => {
-    this.video.volume = event.target.value;
+    this.video.volume = event.target.value
+  }
+  handleVolumeClick = event => {
+    this.video.volume = this.video.volume ? 0 : 1
   }
   render() {
     return (
@@ -76,6 +79,7 @@ class VideoPlayer extends Component {
           />
           <Volume
             handleVolumeChange={this.handleVolumeChange}
+            handleVolumeClick={this.handleVolumeClick}
           />
         </Controls>
       <Spinner
