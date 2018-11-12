@@ -83,7 +83,7 @@ class VideoPlayer extends Component {
         setRef={this.setRef}
       >
         <Title
-          title="Esto es un video"
+          title={this.props.title}
         />
         <Controls>
           <PlayPause

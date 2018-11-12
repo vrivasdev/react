@@ -6,14 +6,13 @@ class Media extends PureComponent {
 	state = { //ES7: State definition
 		author: 'Carlos Perez'
 	}
-	/*handleClick = (event) => { // ES7: arrows inherit the parent context
-		this.setState({
-			author: 'Ricardo Sanchez'
-		})
-	}*/
+	handleClick = event => { // ES7: arrows inherit the parent context
+		console.log("_____ click ____");
+		this.props.openModal(this.props) // component properties pass trought parent components until the home component
+	}
 	render() {
 		return (
-			<div className="Media" onClick={this.props.handleClick}>
+			<div className="Media" onClick={this.handleClick}>
 				<div className="Media-cover">
 					<img className="Media-image"
 						src={this.props.cover}
