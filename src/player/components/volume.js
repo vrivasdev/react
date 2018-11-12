@@ -7,9 +7,9 @@ const Volume = props => (
     className="Volume"
   >
     <VolumeIcon
-      color={"white"}
+      color={props.isMuted ? "red" : "white"}
       size={25}
-      handleVolumeClick={props.handleVolumeClick}      
+      handleVolumeClick={props.handleVolumeClick}
     />
   <div className="Volume-range">
       <input
